@@ -34,5 +34,5 @@ jobs:
           name: Build
           command: yarn build
       - run:
-        name: Docker Build
-        command: docker build -t 'docker-test/app:v1.0.0'
+          name: Docker Build
+          command: docker build -t 'docker-test/app:v1.0.0'
