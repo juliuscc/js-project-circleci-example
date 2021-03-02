@@ -34,7 +34,7 @@ jobs:
           name: Build
           command: yarn build
       - setup_remote_docker:
-        version: 19.03.13
+          version: 19.03.13
       - run:
           name: Docker Build
           command: docker build -t 'docker-test/app:v1.0.0' .
