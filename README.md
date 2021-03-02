@@ -15,10 +15,8 @@ Join a team of freelance writers and write about your favorite technology topics
 
 Reviewers: [Ron Powell][ron], [Stanley Ndagi][stan]
 
-
 [blog]: https://circleci.com/blog/next-testing
 [author]: https://github.com/coderonfleek
-
 [gwp-program]: https://circle.ci/3ahQxfu
 [ron]: https://github.com/ronpowelljr
 [stan]: https://github.com/NdagiStanley
