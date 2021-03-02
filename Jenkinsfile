@@ -6,26 +6,53 @@ pipeline {
   stages {
     stage('Dependencies') {
       steps {
-        sh 'yarn install'
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn install'
+        }
       }
     }
+
     stage('Check Formatting') {
-      sh 'yarn check-formatting'
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn check-formatting'
+        }
+      }
     }
     stage('Lint') {
-      sh 'yarn lint'
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn lint'
+        }
+      }
     }
     stage('Depcheck') {
-      sh 'yarn depcheck'
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn depcheck'
+        }
+      }
     }
     stage('Run tests') {
-      sh 'yarn test'
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn test'
+        }
+      }
     }
     stage('Build') {
-      sh 'yarn build'
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh 'yarn build'
+        }
+      }
     }
     stage('Docker Build') {
-      sh "docker build -t 'docker-test/app:v1.0.0' ."
+      steps {
+        nodejs(nodeJSInstallationName: 'Node 14.x') {
+          sh "docker build -t 'docker-test/app:v1.0.0' ."
+        }
+      }
     }
   }
 }
