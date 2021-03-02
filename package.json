@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "format": "prettier --write .",
+    "check-formatting": "prettier --check .",
+    "lint": "eslint ./**/*.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -18,7 +21,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.2",
     "babel-jest": "^26.3.0",
-    "jest": "^26.4.2"
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.2.1"
   },
   "jest": {
     "testPathIgnorePatterns": [

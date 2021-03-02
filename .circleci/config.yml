@@ -19,5 +19,11 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: Check Formatting
+          command: npm run check-formatting
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
           name: Run tests
           command: npm run test
